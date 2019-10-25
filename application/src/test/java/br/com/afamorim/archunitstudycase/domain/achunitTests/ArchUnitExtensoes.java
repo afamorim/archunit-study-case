@@ -7,6 +7,7 @@ import com.tngtech.archunit.lang.ArchCondition;
 import com.tngtech.archunit.lang.ConditionEvents;
 import com.tngtech.archunit.lang.SimpleConditionEvent;
 import org.springframework.security.access.annotation.Secured;
+import org.springframework.stereotype.Service;
 
 public class ArchUnitExtensoes {
 
@@ -25,6 +26,21 @@ public class ArchUnitExtensoes {
                     if (!method.isAnnotatedWith(Secured.class)) {
                         String message = String.format(
                                  "Method %s is not @Secured", method.getFullName());
+                        events.add(SimpleConditionEvent.violated(method, message));
+                    }
+                }
+            }
+        };
+    }
+
+    public static ArchCondition<JavaClass> metodoService(){
+        return new ArchCondition<JavaClass>("only be accessed by @Service methods") {
+            @Override
+            public void check(JavaClass item, ConditionEvents events) {
+                for (JavaMethod method : item.getMethods()) {
+                    if (!method.isAnnotatedWith(Service.class)) {
+                        String message = String.format(
+                                "Method %s is not @Service", method.getFullName());
                         events.add(SimpleConditionEvent.violated(method, message));
                     }
                 }
