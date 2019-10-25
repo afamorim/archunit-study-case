@@ -97,6 +97,7 @@
 		<dependency>
 			<groupId>com.tngtech.archunit</groupId>
 			<artifactId>archunit</artifactId>
+            <version>0.11.0</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -129,9 +130,9 @@
 							<generateApiTests>false</generateApiTests>
 							<configOptions>
 								<sourceFolder>/src/main/java</sourceFolder>
-								<invokerPackage>br.com.afamorim.archunitsutdycase.contract</invokerPackage>
-								<modelPackage>br.com.afamorim.archunitsutdycase.contract.representation</modelPackage>
-								<apiPackage>br.com.afamorim.archunitsutdycase.contract.api</apiPackage>
+								<invokerPackage>br.com.afamorim.archunitstudycase.contract</invokerPackage>
+								<modelPackage>br.com.afamorim.archunitstudycase.contract.representation</modelPackage>
+								<apiPackage>br.com.afamorim.archunitstudycase.contract.api</apiPackage>
 								<dateLibrary>java8</dateLibrary>
 								<interfaceOnly>true</interfaceOnly>
 								<delegatePattern>true</delegatePattern>
