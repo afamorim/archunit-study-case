@@ -1,4 +1,4 @@
-package br.com.afamorim.archunitstudycase.domain.config;
+package br.com.afamorim.archunitstudycase.application.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

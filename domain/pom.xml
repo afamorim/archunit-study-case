@@ -35,9 +35,16 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
+		<!--dependency>
 			<groupId>com.tngtech.archunit</groupId>
 			<artifactId>archunit</artifactId>
+			<version>0.11.0</version>
+			<scope>test</scope>
+		</dependency-->
+
+		<dependency>
+			<groupId>com.tngtech.archunit</groupId>
+			<artifactId>archunit-junit4</artifactId>
 			<version>0.11.0</version>
 			<scope>test</scope>
 		</dependency>

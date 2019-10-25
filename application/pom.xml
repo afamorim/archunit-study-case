@@ -23,6 +23,12 @@
 
 	<dependencies>
 
+        <dependency>
+			<groupId>br.com.afamorim.archunitsutdycase.domain</groupId>
+			<artifactId>domain</artifactId>
+			<version>${project.version}</version>
+        </dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
@@ -96,8 +102,8 @@
 
 		<dependency>
 			<groupId>com.tngtech.archunit</groupId>
-			<artifactId>archunit</artifactId>
-            <version>0.11.0</version>
+			<artifactId>archunit-junit4</artifactId>
+			<version>0.11.0</version>
 			<scope>test</scope>
 		</dependency>
 

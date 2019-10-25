@@ -1,4 +1,4 @@
-package br.com.afamorim.archunitstudycase.domain.config;
+package br.com.afamorim.archunitstudycase.application.config;
 
 import org.jdbi.v3.core.Jdbi;
 import org.jdbi.v3.core.mapper.RowMapper;

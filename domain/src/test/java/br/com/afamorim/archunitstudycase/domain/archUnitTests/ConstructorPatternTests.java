@@ -7,12 +7,15 @@ import org.junit.Test;
 
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 
-public class ArchitectureAccessRules {
+public class ConstructorPatternTests {
 
     @Test
-    public void portImplementsRules(){
+    public void modelImplementsConstructorRules(){
         JavaClasses importedClasses = new ClassFileImporter().importPackages("br.com.afamorim.archunitstudycase.domain");
-        ArchRule rule = classes().that().resideInAPackage("..repository..").should().onlyBeAccessed().byAnyPackage("..adapter..");
+        ArchRule rule = classes()
+                .that()
+                .resideInAPackage("..model..")
+                .should(ArchunitExtensoes.temConstrutorPadrao());
 
         rule.check(importedClasses);
     }
